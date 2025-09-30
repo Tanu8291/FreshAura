@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Order Details - Freshaura</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
+  body {
+    font-family: 'Georgia', serif;
+    background: url('jasmine-flower-pattern-white-color-nature-seamless-for-wallpaper-print-background-photo.jpeg') no-repeat center center fixed; /* Replace with your background image path */
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    color: #2c3e50;
+  }
+  .form-container {
+    max-width: 500px;
+    margin: auto;
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #27ae60;
+  }
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 700;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Georgia', serif;
+  }
+  button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 20px;
+    background-color: #27ae60;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  button:hover {
+    background-color: #1e854a;
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body>
+<div class="form-container">
+<h2>Place Your Order</h2>
+<form action="orderplaced.html" method="POST">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+  <label for="address">Address</label>
+  <textarea id="address" name="address" rows="4" placeholder="Your delivery address" required></textarea>
+
+  <label for="mob">Mobile No</label>
+  <input type="text" id="mob" name="mob" placeholder="10 digit mobile number" pattern="[0-9]{10}" required />
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="Your email" required />
+
+  <button type="submit">Submit Order</button>
+</form>
+</div>
+</body>
+</html>
