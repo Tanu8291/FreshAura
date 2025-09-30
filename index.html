@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Jamais - Freshaura</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Georgia', serif;
+      background: url('jasmine-flower-pattern-white-color-nature-seamless-for-wallpaper-print-background-photo.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #2c3e50;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header, footer {
+      background: rgba(255 255 255 / 0.85);
+      padding: 1em 2em;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-weight: bold;
+      font-size: 1.6em;
+      letter-spacing: 1.2px;
+    }
+    footer {
+      font-size: 1em;
+      margin-top: auto;
+      color: #555;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2em;
+      background: rgba(255 255 255 / 0.75);
+      margin: 2em auto;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.1em;
+      font-weight: 900;
+    }
+    h2 {
+      font-size: 2em;
+      margin-top: 0;
+      margin-bottom: 0.2em;
+      color: #27ae60;
+      font-weight: 700;
+    }
+    p.tagline {
+      font-size: 1.2em;
+      font-style: italic;
+      margin-bottom: 1.5em;
+      color: #444;
+    }
+    img.product-image {
+      max-width: 300px;
+      border: 6px solid #27ae60;
+      border-radius: 12px;
+      margin-bottom: 1.5em;
+      box-shadow: 0 8px 16px rgba(39, 174, 96, 0.3);
+      background: white;
+    }
+
+    button {
+      background-color: #27ae60;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.25em;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(39, 174, 96, 0.7);
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1e854a;
+    }
+
+    .flower {
+      position: absolute;
+      font-size: 2.2em;
+      pointer-events: none;
+      animation: floatUp 3s linear forwards;
+      user-select: none;
+      z-index: 1000;
+    }
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-250px) scale(0.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    A Jamais - Pure Elegance in Every Bar
+  </header>
+
+  <main>
+    <h1>A Jamais</h1>
+    <h2>Freshaura</h2>
+    <p class="tagline">Freshness that never fades</p>
+
+    <img src="generated-image.png" alt="Freshaura Jasmine Soap" class="product-image" />
+
+    <button onclick="experienceFreshness()">Experience Freshness</button>
+
+  
+  </main>
+
+  <footer>
+    &copy; 2025 A Jamais. All Rights Reserved.
+  </footer>
+
+  <script>
+  function flowJasmineFlowers() {
+    const flowerChar = "🌼";
+    for (let i = 0; i < 12; i++) {
+      const flower = document.createElement("div");
+      flower.className = "flower";
+      flower.innerText = flowerChar;
+      flower.style.left = (Math.random() * (window.innerWidth - 30)) + "px";
+      flower.style.top = window.innerHeight - 60 + "px";
+      document.body.appendChild(flower);
+      setTimeout(() => flower.remove(), 3000);
+    }
+  }
+
+  function experienceFreshness() {
+    flowJasmineFlowers();
+    setTimeout(() => {
+      window.location.href = 'info.html'; // Replace with your page's filename
+    }, 1500);  // wait so flowers animate before redirect
+  }
+</script>
+</body>
+</html>
